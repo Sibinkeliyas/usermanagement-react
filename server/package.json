@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cloudinary": "^1.33.0",
+    "cookie-parser": "~1.4.4",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^4.13.0",
+    "morgan": "~1.9.1",
+
+    "nodemon": "^2.0.20",
+    "session": "^0.1.0",
+    "uuid": "^9.0.0"
+  }
+}
