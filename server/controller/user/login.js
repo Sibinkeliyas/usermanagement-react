@@ -31,25 +31,31 @@ exports.loginUserPost = (req,res) => {
 
 exports.userHome = (req,res) => {
     try {
-        userHelpers.doFind(req.query.id).then((data) => {
-        //    res.status(200).json('12345')
-        })
+        
     } catch (error) {
         res.status(400).json(error);
     }
 }
 
 exports.userProfile = (req,res) => {
-    console.log("111111111111111111111111");
-    console.log(req.files);
+    console.log("datatata");
     try {
-        console.log("req.body");
-        console.log(req.body);
-        userHelpers.doFind(req.body.id).then((data) => {
-        //    res.status(200).json('12345')
+        userHelpers.doUpdate(req.body).then((data) => {
+           res.status(200).json(data)
         })
     } catch (error) {
         console.log(error);
         res.status(400).json(error);
+    }
+}
+
+exports.userprofileGet = ( req,res) => {
+    try {
+        console.log(req.query);
+        userHelpers.doData(req.query.id).then((data) => {
+            res.status(200).json(data)
+        })
+    } catch (error) {
+        
     }
 }

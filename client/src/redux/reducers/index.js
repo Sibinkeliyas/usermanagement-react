@@ -1,12 +1,13 @@
 import {combineReducers} from 'redux'
-import { userLoginReducer } from './signInReducers'
+import { userLoginReducer, userProfileGetReducer } from './signInReducers'
 import { adminLoginReducer } from './signInReducers'
 
 
 
 const reducers = combineReducers ({
     userLogin : userLoginReducer,
-    adminLogin : adminLoginReducer
+    adminLogin : adminLoginReducer,
+    profileReducer : userProfileGetReducer
 })
 
 export default reducers

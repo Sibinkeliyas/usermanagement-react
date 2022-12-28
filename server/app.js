@@ -7,7 +7,7 @@ const session = require('express-session')
 const {v4:uuidv4} = require('uuid')
 const bodyParser = require('body-parser')
 const cors = require('cors');
-const uploader=require("express-fileupload")
+
 const cloudinary=require("cloudinary").v2
 
 var fs = require('fs')
@@ -31,7 +31,7 @@ connection.connect((err)=>{
   }
 })
 
-app.use(uploader())
+
 
 // session
 app.use(session({

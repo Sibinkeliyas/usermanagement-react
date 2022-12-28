@@ -17,10 +17,7 @@ function Login() {
     e.preventDefault();
     dispatch(adminRegister(email,password))
     
-  }
-  console.log("state");
-  console.log(state);
-  
+  } 
   useEffect (() => {
     let adminInfo = localStorage.getItem('adminInfo')
     if(adminInfo) {
@@ -36,7 +33,7 @@ function Login() {
                 state.adminloading ? <Loading /> : ""
               }
               {
-                state.emailStatus === true && state.loginErrorData ? <h2 style={{color : 'red'}}>{state.loginErrorData}</h2> : <h2>Login To Your Account</h2>
+                state.emailStatus === true && state.loginErrorData ? <h2 style={{color : 'red'}}>{state.loginErrorData.data}</h2> : <h2>Login To Your Account</h2>
               }
                     <input type="text" name="username" onChange={(e) => setEmail(e.target.value)} placeholder="Username" />
                     <input type="password" name="password" onChange={(e) => setPassword(e.target.value)}  placeholder="Password" />

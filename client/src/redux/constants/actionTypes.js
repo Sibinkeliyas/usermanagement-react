@@ -10,6 +10,21 @@ export const ActionTypes = {
     HOME_FAIL : 'userhome',
     ADMINLOGINERQUEST : 'adminloginrequest',
     ADMINLOGINSUCCESS : 'adminregitersuccess',
-    ADMINLOGINFAILED : 'adminregiterfailed'
+    ADMINLOGINFAILED : 'adminregiterfailed',
+    ADMINHOME: 'adminhome',
+    ADMINHOMEREQUEST : 'adminHomeRequest',
+    ADMINSELECTDATA : 'adminselectdata',
+    ADMINSELECTREQUEST : 'adminselectrequest',
+    ADMINUPDATEFAILED :'adminupdatefailed',
+    ADMINBLOCKREQUEST : 'admninblock',
+    ADMINBLOCKSUCCESS : 'adminblocksuccess',
+    ADMINBLOCKFAILED : 'adminblockfailed',
+    USERIMAGEUPLOADREQUSET : 'imageuploadrequest',
+    USERIMAGEUPLOADSUCCESS : 'imageuploadsuccess',
+    USERIMAGEUPLOADFAILED : 'imageuploadfailed',
+
+    USERPROFILEGETREQUEST : 'userprofileget',
+    USERPROFILEGETSUCCESS : 'userprofilesuccess',
+    USERPROFILEGETFAIL : 'userprofilefailed'
 
 }

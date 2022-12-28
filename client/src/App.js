@@ -11,6 +11,7 @@ import { BrowserRouter as Router , Route, Routes } from 'react-router-dom';
 import Home from './components/user/home/Home';
 import AdminHome from './components/admin/home/Home';
 import Profile from './components/user/profile/Profile';
+import Update from './components/admin/updateUser/Update';
 
 
 
@@ -33,6 +34,7 @@ function App() {
           {/* admin */}
           <Route exact  path='admin/login' element={<AdminLogin/>} />
           <Route exact  path='admin/' element={<AdminHome/>} />
+          <Route exact  path='admin/update' element={<Update/>} />
           
           <Route>404 Not found</Route>
         </Routes>
