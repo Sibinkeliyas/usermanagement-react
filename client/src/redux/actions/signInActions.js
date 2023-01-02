@@ -129,11 +129,7 @@ export const uploadImage = (image, id) => async (dispatch) => {
     };
     const {
       data
-    } = await axios.post('http://localhost:3001/profile', {
-        image,
-        id
-      },
-      config).then((data) => {
+    } = await axios.post('http://localhost:3001/profile', {image,id},config).then((data) => {
       localStorage.setItem("profile", JSON.stringify(data.data.image))
       dispatch({
         type: ActionTypes.USERIMAGEUPLOADSUCCESS,

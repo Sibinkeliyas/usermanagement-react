@@ -10,8 +10,6 @@ function Profile() {
     const [profile,setProfile] = useState()
     const [cloudinary,setCloudinary] = useState()
     const [profileImage,setProfileImage] = useState()
-    const image = localStorage.getItem("profile");
-    const src = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTF_erFD1SeUnxEpvFjzBCCDxLvf-wlh9ZuPMqi02qGnyyBtPWdE-3KoH3s"
     const state = useSelector((state) => state.userLogin)
     const profileData  = useSelector(state=>state.profileReducer)
     const {profileloading,error,profiledata} = profileData;

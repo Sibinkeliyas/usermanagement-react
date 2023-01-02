@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './home.css'
 import {useSelector,useDispatch} from "react-redux"
-import { adminblockUnblock, adminHome, adminRegister, adminUpdate } from '../../../redux/actions/admin'
+import { adminblockUnblock, adminHome, adminUpdate } from '../../../redux/actions/admin'
 import { useNavigate } from 'react-router-dom'
 import Loading from '../../loading'
 
 function Home() {
-    const [dummy ,setDummy] = useState()
+    const [dummy ,setDummy] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const state = useSelector((state) => state)
@@ -19,17 +19,15 @@ function Home() {
         } else {
             navigate('/admin/login')
         }
-       
-    },[])
-    const [selectedUser,setuser] = useState()
+       console.log(dummy);
+    },[dummy])
+
     
     const userData = (data) => {
-        setuser(data)
         dispatch(adminUpdate(data))
     navigate('/admin/update')
     }
 const hadlelogout = () => {
-    console.log("logout admin from admin home ");
     localStorage.removeItem('adminInfo')
     localStorage.getItem('edited user')
     navigate('/admin/login')
@@ -39,10 +37,6 @@ const block = (user) => {
     dispatch(adminblockUnblock(user))
 }
 
-console.log("localStorage.getItem('blocked user')");
-console.log(localStorage.getItem('blocked user'));
-console.log("state.adminLogin.adminData");
-console.log(state.adminLogin.adminData);
     
   return (
     <>
@@ -74,16 +68,16 @@ console.log(state.adminLogin.adminData);
                 <td>
                     <button class="button action" onClick={(e) => {
                         userData(user)
-                        setDummy()
                     }}>Select</button>
                 </td>
                 <td>
                     {
-                        user.loginStaus === true ?   <button class="button action" onClick={(e) => {
+                        user.loginStaus === true ?   <button key={user.email} class="button action" onClick={(e) => {
                                 block(user)
-                        }}>block</button> :   <button class="button action" onClick={(e) => {
+                                setDummy("block")
+                        }}>block</button> :   <button key={user.email} class="button action" onClick={(e) => {
                                 block(user)
-                                setDummy()
+                                setDummy("unblock")
                         }}>Unblock</button>
                     }
                   
