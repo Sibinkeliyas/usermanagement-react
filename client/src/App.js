@@ -1,7 +1,6 @@
 
 import React,{useEffect,useState} from 'react';
 import './App.css';
-import axios from 'axios'
 import Login from './components/user/Log-In/Login';
 import Register from './components/user/register/Register';
 

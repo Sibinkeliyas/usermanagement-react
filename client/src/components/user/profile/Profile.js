@@ -58,7 +58,7 @@ function Profile() {
   }
     {
     
-    profiledata? <img className="avatar" src={imageUrl} alt="Ash" /> : <img className="avatar" src={profile} alt="Ash" />
+    profiledata ? <img className="avatar" src={imageUrl} alt="Ash" /> : <img className="avatar" src={profile} alt="Ash" />
        
 
  }

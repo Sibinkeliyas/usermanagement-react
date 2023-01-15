@@ -94,7 +94,7 @@ export const adminHome = () => async (dispatch) => {
       axios.post(
         "http://localhost:3001/admin/block",{user},
         config).then((Data) => {
-      localStorage.setItem('blocked user',JSON.stringify(Data))
+      localStorage.setItem('blockeduser',JSON.stringify(Data))
         dispatch({type:ActionTypes.ADMINSELECTDATA,payload : Data.data})
       }).catch((err) => {
         dispatch({type:ActionTypes.ADMINUPDATEFAILED,payload :  err.response })

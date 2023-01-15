@@ -10,6 +10,7 @@ function Home() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const state = useSelector((state) => state)
+    const blockuser = localStorage.getItem('blockeduser') 
     useEffect(() => {
         localStorage.removeItem('edited user')
         let adminInfo = localStorage.getItem('adminInfo')
